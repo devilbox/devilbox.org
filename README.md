@@ -49,6 +49,7 @@ $ docker-compose up
 
 <p class="center">Choose your required daemons and select a version. Any combination is possible.<br/>This will allow you, to always exactly simulate your production environment locally during development.</p>
 
+<div class="table-scroll">
 <table>
   <thead>
     <tr>
@@ -151,7 +152,7 @@ $ docker-compose up
     </tr>
   </tbody>
 </table>
-
+</div>
 
 ### Run only what you need
 
