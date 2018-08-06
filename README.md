@@ -1,8 +1,16 @@
-# devilbox.org
+# http://devilbox.org
 
-This repository holds the source code of the [devilbox.org](http://devilbox.org) web page in the [gh-pages](https://github.com/devilbox/devilbox.org/tree/gh-pages) branch.
+Github repository for the Devilbox website.
+The source code is located in the [gh-pages](https://github.com/devilbox/devilbox.org/tree/gh-pages) branch.
 
-![devilbox](devilbox-dash.png)
+---
+
+#### The official Devilbox repository is here: https://github.com/cytopia/devilbox
+
+---
+
+
+[![devilbox](devilbox-dash.png)](https://github.com/cytopia/devilbox)
 
 
 ### How to build locally?
