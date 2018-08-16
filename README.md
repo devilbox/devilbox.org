@@ -1,17 +1,21 @@
 # Devilbox
- 
+
 **[Quickstart](https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md)**｜**[Install](https://github.com/cytopia/devilbox/blob/master/docs/Install.md)**｜**[Update](https://github.com/cytopia/devilbox/blob/master/docs/Update.md)**｜**[Configure](https://github.com/cytopia/devilbox/blob/master/docs/Configure.md)**｜**[Run](https://github.com/cytopia/devilbox/blob/master/docs/Run.md)**｜**[Usage](https://github.com/cytopia/devilbox/blob/master/docs/Usage.md)**｜**[OS](https://github.com/cytopia/devilbox/blob/master/docs/OS.md)**｜**[Backups](https://github.com/cytopia/devilbox/blob/master/docs/Backups.md)**｜**[Examples](https://github.com/cytopia/devilbox/blob/master/docs/Examples.md)**｜**[Technical](https://github.com/cytopia/devilbox/blob/master/docs/Technical.md)**｜**[Hacking](https://github.com/cytopia/devilbox/blob/master/docs/Hacking.md)**｜**[FAQ](https://github.com/cytopia/devilbox/blob/master/docs/FAQ.md)**
+
+ <div class="center"><strong>Reproducable</strong> and identical development environment for <strong>all host operating</strong> systems with <strong>zero configuration</strong> requirements.</div>
 
 ---
 
 
-### Dockerized LAMP/MEAN stack
+### Docker LAMP development stack with valid https support
 
 <div class="center">
-  <a href="https://github.com/cytopia/devilbox"><img class="battery" title="Devilbox on Github" alt="Github" src="/assets/img/logos/64x64/github.png" /></a>
-  <a href="https://hub.docker.com/r/cytopia"><img class="battery" title="Devilbox on Docker Hub" alt="Docker" src="/assets/img/logos/64x64/docker.png" /></a>
+  <img width="250" style="width:250px;" src="assets/img/https-ssl-address-bar.png" />
 </div>
-<p class="center">The devilbox is a modern and highly customisable <a href="https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29">LAMP</a> and <a href="https://en.wikipedia.org/wiki/MEAN_(software_bundle)">MEAN</a> stack replacement based purely on docker and docker-compose running on all major platforms. It supports an unlimited number of projects for which vhosts and DNS records are created automatically. Email catch-all and popular development tools will be at your service as well.</p>
+
+<p class="center">
+The Devilbox is a modern and highly customisable <strong>dockerized PHP stack</strong> supporting full <strong>LAMP</strong> and <strong>MEAN</strong> and running on all major platforms. The main goal is to easily switch and combine any version required for local development. <br/><br/>It supports an <strong>unlimited number of projects</strong> for which <strong>vhosts</strong>, <strong>SSL certificates</strong> and <strong>DNS records</strong> are created automatically. Email catch-all and popular development tools will be at your service as well. Configuration is not necessary, as everything is already pre-setup.</p>
+
 
 <img src="assets/img/devilbox-dash.png" alt="Devilbox"/>
 
@@ -29,27 +33,57 @@
 
 ### Install, Configure and Start
 
+<p class="center">
+  <strong>Documentation:</strong>
+  <a href="https://devilbox.readthedocs.io/en/latest/getting-started/install-the-devilbox.html">Install the Devilbox</a> |
+  <a href="https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html">Start the Devilbox</a> |
+  <a href="https://devilbox.readthedocs.io/en/latest/configuration-files/env-file.html">.env file</a>
+</p>
+
 <p class="center">Your whole development stack is up and running in a few simple steps.</p>
 
-```shell
-# Get the soures
-$ git clone https://github.com/cytopia/devilbox
+<table width="100%" style="width:100%; display:table;">
+ <thead>
+  <tr>
+   <th width="50%" style="width:50%;">Linux and MacOS</th>
+   <th width="50%" style="width:50%;">Windows</th>
+  </tr>
+ </thead>
+ <tbody style="vertical-align: bottom;">
+  <tr>
+   <td><pre># Get the Devilbox
+$ git clone https://github.com/cytopia/devilbox</pre></td>
+   <td>1. Clone <code>https://github.com/cytopia/devilbox</code> to <code>C:\devilbox</code> with <a href="https://git-scm.com/downloads">Git for Windows</a></td>
+  </tr>
+  <tr>
+   <td><pre># Create docker-compose environment file
 $ cd devilbox
-
-# Create and customize the config file
-$ cp env-example .env
-$ vim .env
-
-# Start your daemons
-$ docker-compose up
-```
+$ cp env-example .env</pre></td>
+   <td>2. Copy <code>C:\devilbox\env-example</code> to <code>C:\devilbox\.env</code></td>
+  </tr>
+  <tr>
+   <td><pre># Edit your configuration
+$ vim .env</pre></td>
+   <td>3. Edit <code>C:\devilbox\.env</code></td>
+  </tr>
+  <tr>
+   <td><pre># Start all container
+$ docker-compose up</pre></td>
+   <td><pre># Start all container
+C:\devilbox> docker-compose up</pre></td>
+  </tr>
+ </tbody>
+</table>
 
 
 ### Run exactly what you need
 
-<p class="center">Choose your required daemons and select a version. Any combination is possible.<br/>This will allow you, to always exactly simulate your production environment locally during development.</p>
+<p class="center">
+  <strong>Documentation:</strong>
+  <a href="https://devilbox.readthedocs.io/en/latest/getting-started/change-container-versions.html">Change container versions</a>
+</p>
 
-<div class="table-scroll">
+<p class="center">Choose your required daemons and select a version. Any combination is possible.<br/>This will allow you, to always exactly simulate your production environment locally during development.</p>
 <table>
   <thead>
     <tr>
@@ -67,94 +101,160 @@ $ docker-compose up
   </thead>
   <tbody>
     <tr>
-      <td><a title="Apache 2.2"       href="https://github.com/cytopia/docker-apache-2.2">2.2</a></td>
-      <td><a title="Nginx stable"     href="https://github.com/cytopia/docker-nginx-stable">stable</a></td>
-      <td><a title="PHP 5.4"          href="https://github.com/cytopia/docker-php-fpm-5.4">5.4</a></td>
-      <td><a title="MySQL 5.5"        href="https://github.com/cytopia/docker-mysql-5.5">5.5</a></td>
-      <td><a title="MariaDB 5.5"      href="https://github.com/cytopia/docker-mariadb-5.5">5.5</a></td>
-      <td><a title="PerconaDB 5.5"    href="https://github.com/cytopia/docker-percona-5.5">5.5</a></td>
-      <td><a title="PgSQL 9.1"        href="https://github.com/docker-library/postgres">9.1</a></td>
-      <td><a title="Redis 2.8"        href="https://github.com/docker-library/redis">2.8</a></td>
-      <td><a title="Memcached 1.4.21" href="https://github.com/docker-library/memcached">1.4.21</a></td>
-      <td><a title="MongoDB 2.8"      href="https://github.com/docker-library/mongo">2.8</a></td>
+      <td><a target="_blank" title="Apache 2.2"       href="https://github.com/devilbox/docker-apache-2.2">2.2</a></td>
+      <td><a target="_blank" title="Nginx stable"     href="https://github.com/devilbox/docker-nginx-stable">stable</a></td>
+      <td><a target="_blank" title="PHP 5.2"          href="https://github.com/devilbox/docker-php-fpm">5.2</a><sup>[1]</sup></td>
+      <td><a target="_blank" title="MySQL 5.5"        href="https://github.com/cytopia/docker-mysql-5.5">5.5</a></td>
+      <td><a target="_blank" title="MariaDB 5.5"      href="https://github.com/cytopia/docker-mariadb-5.5">5.5</a></td>
+      <td><a target="_blank" title="PerconaDB 5.5"    href="https://github.com/cytopia/docker-percona-5.5">5.5</a></td>
+      <td><a target="_blank" title="PgSQL 9.1"        href="https://github.com/docker-library/postgres">9.1</a></td>
+      <td><a target="_blank" title="Redis 2.8"        href="https://github.com/docker-library/redis">2.8</a></td>
+      <td><a target="_blank" title="Memcached 1.4.21" href="https://github.com/docker-library/memcached">1.4.21</a></td>
+      <td><a target="_blank" title="MongoDB 2.8"      href="https://github.com/docker-library/mongo">2.8</a></td>
     </tr>
     <tr>
-      <td><a title="Apache 2.4"       href="https://github.com/cytopia/docker-apache-2.4">2.4</a></td>
-      <td><a title="Nginx mainline"   href="https://github.com/cytopia/docker-nginx-mainline">mainline</a></td>
-      <td><a title="PHP 5.5"          href="https://github.com/cytopia/docker-php-fpm-5.5">5.5</a></td>
-      <td><a title="MySQL 5.6"        href="https://github.com/cytopia/docker-mysql-5.6">5.6</a></td>
-      <td><a title="MariaDB 10.0"     href="https://github.com/cytopia/docker-mariadb-10.0">10.0</a></td>
-      <td><a title="PerconaDB 5.6"    href="https://github.com/cytopia/docker-percona-5.6">5.6</a></td>
-      <td><a title="PgSQL 9.2"        href="https://github.com/docker-library/postgres">9.2</a></td>
-      <td><a title="Redis 3.0"        href="https://github.com/docker-library/redis">3.0</a></td>
-      <td><a title="Memcached 1.4.22" href="https://github.com/docker-library/memcached">1.4.22</a></td>
-      <td><a title="MongoDB 3.0"      href="https://github.com/docker-library/mongo">3.0</a></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td><a title="PHP 5.6"          href="https://github.com/cytopia/docker-php-fpm-5.6">5.6</a></td>
-      <td><a title="MySQL 5.7"        href="https://github.com/cytopia/docker-mysql-5.7">5.7</a></td>
-      <td><a title="MariaDB 10.1"     href="https://github.com/cytopia/docker-mariadb-10.1">10.1</a></td>
-      <td><a title="PerconaDB 5.7"    href="https://github.com/cytopia/docker-percona-5.7">5.7</a></td>
-      <td><a title="PgSQL 9.3"        href="https://github.com/docker-library/postgres">9.3</a></td>
-      <td><a title="Redis 3.2"        href="https://github.com/docker-library/redis">3.2</a></td>
-      <td><a title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.23</a></td>
-      <td><a title="MongoDB 3.2"      href="https://github.com/docker-library/mongo">3.2</a></td>
+      <td><a target="_blank" title="Apache 2.4"       href="https://github.com/devilbox/docker-apache-2.4">2.4</a></td>
+      <td><a target="_blank" title="Nginx mainline"   href="https://github.com/devilbox/docker-nginx-mainline">mainline</a></td>
+      <td><a target="_blank" title="PHP 5.3"          href="https://github.com/devilbox/docker-php-fpm">5.3</a></td>
+      <td><a target="_blank" title="MySQL 5.6"        href="https://github.com/cytopia/docker-mysql-5.6">5.6</a></td>
+      <td><a target="_blank" title="MariaDB 10.0"     href="https://github.com/cytopia/docker-mariadb-10.0">10.0</a></td>
+      <td><a target="_blank" title="PerconaDB 5.6"    href="https://github.com/cytopia/docker-percona-5.6">5.6</a></td>
+      <td><a target="_blank" title="PgSQL 9.2"        href="https://github.com/docker-library/postgres">9.2</a></td>
+      <td><a target="_blank" title="Redis 3.0"        href="https://github.com/docker-library/redis">3.0</a></td>
+      <td><a target="_blank" title="Memcached 1.4.22" href="https://github.com/docker-library/memcached">1.4.22</a></td>
+      <td><a target="_blank" title="MongoDB 3.0"      href="https://github.com/docker-library/mongo">3.0</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a title="PHP 7.0"          href="https://github.com/cytopia/docker-php-fpm-7.0">7.0</a></td>
-      <td><a title="MySQL 8.0"        href="https://github.com/cytopia/docker-mysql-8.0">8.0</a></td>
-      <td><a title="MariaDB 10.2"     href="https://github.com/cytopia/docker-mariadb-10.2">10.2</a></td>
-      <td></td>
-      <td><a title="PgSQL 9.4"        href="https://github.com/docker-library/postgres">9.4</a></td>
-      <td></td>
-      <td><a title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.24</a></td>
-      <td><a title="MongoDB 3.4"      href="https://github.com/docker-library/mongo">3.4</a></td>
+      <td><a target="_blank" title="PHP 5.4"          href="https://github.com/devilbox/docker-php-fpm">5.4</a></td>
+      <td><a target="_blank" title="MySQL 5.7"        href="https://github.com/cytopia/docker-mysql-5.7">5.7</a></td>
+      <td><a target="_blank" title="MariaDB 10.1"     href="https://github.com/cytopia/docker-mariadb-10.1">10.1</a></td>
+      <td><a target="_blank" title="PerconaDB 5.7"    href="https://github.com/cytopia/docker-percona-5.7">5.7</a></td>
+      <td><a target="_blank" title="PgSQL 9.3"        href="https://github.com/docker-library/postgres">9.3</a></td>
+      <td><a target="_blank" title="Redis 3.2"        href="https://github.com/docker-library/redis">3.2</a></td>
+      <td><a target="_blank" title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.23</a></td>
+      <td><a target="_blank" title="MongoDB 3.2"      href="https://github.com/docker-library/mongo">3.2</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a title="PHP 7.1"          href="https://github.com/cytopia/docker-php-fpm-7.1">7.1</a></td>
+      <td><a target="_blank" title="PHP 5.5"          href="https://github.com/devilbox/docker-php-fpm">5.5</a></td>
+      <td><a target="_blank" title="MySQL 8.0"        href="https://github.com/cytopia/docker-mysql-8.0">8.0</a></td>
+      <td><a target="_blank" title="MariaDB 10.2"     href="https://github.com/cytopia/docker-mariadb-10.2">10.2</a></td>
       <td></td>
-      <td><a title="MariaDB 10.3"     href="https://github.com/cytopia/docker-mariadb-10.3">10.3</a></td>
+      <td><a target="_blank" title="PgSQL 9.4"        href="https://github.com/docker-library/postgres">9.4</a></td>
+      <td><a target="_blank" title="Redis 4.0"        href="https://github.com/docker-library/redis">4.0</a></td>
+      <td><a target="_blank" title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.24</a></td>
+      <td><a target="_blank" title="MongoDB 3.4"      href="https://github.com/docker-library/mongo">3.4</a></td>
+    </tr>
+    <tr>
       <td></td>
-      <td><a title="PgSQL 9.5"        href="https://github.com/docker-library/postgres">9.5</a></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 5.6"          href="https://github.com/devilbox/docker-php-fpm">5.6</a></td>
+      <td></td>
+      <td><a target="_blank" title="MariaDB 10.3"     href="https://github.com/cytopia/docker-mariadb-10.3">10.3</a></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 9.5"        href="https://github.com/docker-library/postgres">9.5</a></td>
       <td></td>
       <td>...</td>
-      <td><a title="MongoDB 3.5"      href="https://github.com/docker-library/mongo">3.5</a></td>
+      <td><a target="_blank" title="MongoDB 3.5"      href="https://github.com/docker-library/mongo">3.5</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a title="PHP 7.2"          href="https://github.com/cytopia/docker-php-fpm-7.2">7.2</a></td>
+      <td><a target="_blank" title="PHP 7.0"          href="https://github.com/devilbox/docker-php-fpm">7.0</a></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><a title="PgSQL 9.6"        href="https://github.com/docker-library/postgres">9.6</a></td>
+      <td><a target="_blank" title="PgSQL 9.6"        href="https://github.com/docker-library/postgres">9.6</a></td>
       <td></td>
-      <td><a title="Memcached 1.4.36" href="https://github.com/docker-library/memcached">1.4.36</a></td>
+      <td><a target="_blank" title="Memcached 1.5.2"  href="https://github.com/docker-library/memcached">1.5.2</a></td>
       <td></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a title="HHVM"             href="https://github.com/cytopia/docker-hhvm-latest">HHVM</a></td>
+      <td><a target="_blank" title="PHP 7.1"          href="https://github.com/devilbox/docker-php-fpm">7.1</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 10.0"       href="https://github.com/docker-library/postgres">10.0</a></td>
+      <td></td>
+      <td><a target="_blank" title="Memcached latest" href="https://github.com/docker-library/memcached">latest</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 7.2"          href="https://github.com/devilbox/docker-php-fpm">7.2</a></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><a title="Memcached latest" href="https://github.com/docker-library/memcached">latest</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 7.3"          href="https://github.com/devilbox/docker-php-fpm">7.3</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td></td>
     </tr>
   </tbody>
 </table>
-</div>
+
+<p class="center"> <strong><sup>[1]</sup></strong> <strong>PHP 5.2</strong> is available to use, but it is not officially supported. The Devilbox intranet does not work with this version as PHP 5.2 does not support namespaces.
+Furthermore PHP 5.2 does only work with Apache 2.4, Nginx stable and Nginx mainline. It does not work with Apache 2.2. Use at your own risk.</p>
+
+
+### Additional services
+
+<p class="center">
+  <strong>Documentation:</strong>
+  <a href="https://devilbox.readthedocs.io/en/latest/custom-container/enable-all-container.html">Enable custom container</a>
+</p>
+
+<p class="center">Additionally to the default stack, there are a variety of other services that can be easily enabled and started.</p>
+
+<table>
+ <thead>
+  <tr>
+   <th>MailHog</th>
+   <th>RabbitMQ</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>v1.0.0</td>
+   <td>3.6</td>
+  </tr>
+  <tr>
+   <td>latest</td>
+   <td>3.7</td>
+  </tr>
+  <tr>
+   <td></td>
+   <td>latest</td>
+  </tr>
+ </tbody>
+</table>
+
+
 
 ### Run only what you need
+
+<p class="center">
+  <strong>Documentation:</strong>
+  <a href="https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html#start-some-container">Start only some container</a>
+</p>
 
 <p class="center">You are not forced to load the whole stack everytime. Only bring up what you really need.<br/>It is also possible to add or remove daemons while the stack is already running.</p>
 
@@ -168,7 +268,6 @@ $ docker-compose up redis
 # Stop MySQL from the current stack
 $ docker-compose stop mysql
 ```
-
 
 ### Introduction Videos
 
@@ -186,18 +285,19 @@ $ docker-compose stop mysql
   <p>The devilbox is a development stack, so it is made sure that a lot of PHP modules are available out of the box in order to work with many different frameworks. There will however be slight differences between the versions and especially with HHVM. To see the exact bundled modules for each version visit the corresponding docker repositories on Github:</p>
 
   <img class="battery" title="PHP" alt="PHP" src="/assets/img/logos/64x64/php.png" />
-  <img class="battery" title="HHVM" alt="HHVM" src="/assets/img/logos/64x64/hhvm.png" />
 
   <p>
-  <strong><a title="PHP 5.4" href="https://github.com/cytopia/docker-php-fpm-5.4">PHP 5.4</a></strong> |
-  <strong><a title="PHP 5.5" href="https://github.com/cytopia/docker-php-fpm-5.5">PHP 5.5</a></strong> |
-  <strong><a title="PHP 5.6" href="https://github.com/cytopia/docker-php-fpm-5.6">PHP 5.6</a></strong> |
-  <strong><a title="PHP 7.0" href="https://github.com/cytopia/docker-php-fpm-7.0">PHP 7.0</a></strong> |
-  <strong><a title="PHP 7.1" href="https://github.com/cytopia/docker-php-fpm-7.1">PHP 7.1</a></strong> |
-  <strong><a title="PHP 7.2" href="https://github.com/cytopia/docker-php-fpm-7.2">PHP 7.2</a></strong> |
-  <strong><a title="HHVM"    href="https://github.com/cytopia/docker-hhvm-latest">HHVM</a></strong>
+  <strong><a title="PHP 5.2" href="https://github.com/devilbox/docker-php-fpm">PHP 5.2</a></strong> |
+  <strong><a title="PHP 5.3" href="https://github.com/devilbox/docker-php-fpm">PHP 5.3</a></strong> |
+  <strong><a title="PHP 5.4" href="https://github.com/devilbox/docker-php-fpm">PHP 5.4</a></strong> |
+  <strong><a title="PHP 5.5" href="https://github.com/devilbox/docker-php-fpm">PHP 5.5</a></strong> |
+  <strong><a title="PHP 5.6" href="https://github.com/devilbox/docker-php-fpm">PHP 5.6</a></strong> |
+  <strong><a title="PHP 7.0" href="https://github.com/devilbox/docker-php-fpm">PHP 7.0</a></strong> |
+  <strong><a title="PHP 7.1" href="https://github.com/devilbox/docker-php-fpm">PHP 7.1</a></strong> |
+  <strong><a title="PHP 7.2" href="https://github.com/devilbox/docker-php-fpm">PHP 7.2</a></strong> |
+  <strong><a title="PHP 7.3" href="https://github.com/devilbox/docker-php-fpm">PHP 7.3</a></strong>
   </p>
-<p>apc, apcu, bcmath, bz2, calendar, Core, ctype, curl, date, dom, ereg, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, intl, json, ldap, libxml, magickwand, mbstring, mcrypt, memcache, memcached, mhash, mongodb, msgpack, mysql, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, phalcon, Phar, posix, pspell, readline, recode, redis, Reflection, session, shmop, SimpleXML, soap, sockets, SPL, sqlite3, standard, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uploadprogress, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib</p>
+<p>amqp, apcu, bcmath, bz2, calendar, Core, ctype, curl, date, dba, dom, enchant, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, interbase, intl, json, ldap, libxml, mbstring, mcrypt, memcache, memcached, mongodb, msgpack, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_dblib, PDO_Firebird, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, phalcon, Phar, posix, pspell, readline, recode, redis, Reflection, session, shmop, SimpleXML, snmp, soap, sockets, sodium, SPL, sqlite3, standard, swoole, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uploadprogress, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib</p>
 </div>
 
 
@@ -219,22 +319,50 @@ $ docker-compose stop mysql
 
 ### Batteries included
 
+<div class="center">
+  <strong>Documentation:</strong> <a href="https://devilbox.readthedocs.io/en/latest/readings/available-tools.html">Available Tools</a>
+</div>
+
 <p class="center">No need to download external tools. Everything is bundled, up-to-date and available inside the containers.</p>
 
+<table width="100%" style="width:100%; display:table;">
+<tbody style="text-align:center;">
+ <tr>
+  <td><a href="https://www.adminer.org"><img width="64" style="width:64px;" src="https://raw.githubusercontent.com/cytopia/icons/master/128x128/adminer.png" alt="Adminer" /></a></td>
+  <td><a href="https://www.phpmyadmin.net"><img width="64" style="width:64px;" src="https://raw.githubusercontent.com/cytopia/icons/master/128x128/phpmyadmin.png" alt="phpMyAdmin" /></a></td>
+  <td><a href="https://github.com/sasanrose/phpredmin"><img width="64" style="width:64px;" src="https://raw.githubusercontent.com/cytopia/icons/master/128x128/phpredmin.png" alt="phpRedMin" /></a></td>
+  <td><a href="https://github.com/PeeHaa/OpCacheGUI"><img width="64" style="width:64px;" src="https://raw.githubusercontent.com/cytopia/icons/master/128x128/opcachegui.png" alt="OpCacheGUI" /></a></td>
+  <td><img width="64" style="width:64px;" src="https://raw.githubusercontent.com/cytopia/icons/master/128x128/email.png" alt="Mail viewer" /></td>
+ </tr>
+ <tr>
+  <td><a href="https://www.adminer.org">Adminer</a></td>
+  <td><a href="https://www.phpmyadmin.net">phpMyAdmin</a></td>
+  <td><a href="https://github.com/sasanrose/phpredmin">phpRedMin</a></td>
+  <td><a href="https://github.com/PeeHaa/OpCacheGUI">OpCache GUI</a></td>
+  <td>Mail viewer</td>
+ </tr>
+</tbody>
+</table>
+
 <div class="center">
-  <a target="_blank" title="phpMyAdmin" href="https://www.phpmyadmin.net"><img class="battery" src="/assets/img/logos/64x64/phpmyadmin.png" alt="Devilbox"/></a>
-  <a target="_blank" title="Adminer" href="https://www.adminer.org"><img class="battery" src="/assets/img/logos/64x64/adminer.png" alt="Devilbox"/></a>
-  <a target="_blank" title="OpCache GUI" href="https://github.com/amnuts/opcache-gui"><img class="battery" src="/assets/img/logos/64x64/opcachegui.png" alt="Devilbox"/></a> 
-  <br/> 
-  <a target="_blank" title="Composer" href="https://getcomposer.org"><img class="battery" src="/assets/img/logos/64x64/composer.png" alt="Devilbox"/></a>
-  <a target="_blank" title="Drush" href="https://www.drupal.org/project/drush"><img class="battery" src="/assets/img/logos/64x64/drush.png" alt="Devilbox"/></a>
-  <a target="_blank" title="Drupal Console" href="https://drupalconsole.com"><img class="battery" src="/assets/img/logos/64x64/drupal-console.png" alt="Devilbox"/></a>
-  <a target="_blank" title="NodeJS" href="https://nodejs.org"><img class="battery" src="/assets/img/logos/64x64/nodejs.png" alt="Devilbox"/></a>
-  <a target="_blank" title="WP-CLI" href="https://wp-cli.org"><img class="battery" src="/assets/img/logos/64x64/wp-cli.png" alt="Devilbox"/></a>
-  <a target="_blank" title="NPM" href="https://www.npmjs.com"><img class="battery" src="/assets/img/logos/64x64/npm.png" alt="Devilbox"/></a>
-  <a target="_blank" title="Git" href="https://git-scm.com"><img class="battery" src="/assets/img/logos/64x64/git.png" alt="Devilbox"/></a>
-  <a target="_blank" title="mysqldump-secure" href="https://mysqldump-secure.org"><img class="battery" src="/assets/img/logos/64x64/mysqldump-secure.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Ansible" href="https://www.ansible.com/"><img width="64" style="width:64px" src="/assets/img/logo_tools/ansible.png" alt="Devilbox"/></a>
+  <a target="_blank" title="CodeCeption" href="https://codeception.com/"><img width="64" style="width:64px" src="/assets/img/logo_tools/codeception.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Composer" href="https://getcomposer.org"><img width="64" style="width:64px" src="/assets/img/logo_tools/composer.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Drupal Console" href="https://drupalconsole.com"><img width="64" style="battery" src="/assets/img/logo_tools/drupal-console.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Drush" href="https://www.drupal.org/project/drush"><img width="64" style="width:64px;" src="/assets/img/logo_tools/drush.png" alt="Devilbox"/></a>
+  <a target="_blank" title="ESLint" href="https://eslint.org/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/eslint.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Git" href="https://git-scm.com"><img width="64" style="width:64px;" src="/assets/img/logo_tools/git.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Gulp" href="https://gulpjs.com/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/gulp.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Grunt" href="https://gruntjs.com/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/grunt.png" alt="Devilbox"/></a>
+  <a target="_blank" title="mysqldump-secure" href="https://mysqldump-secure.org"><img width="64" style="width:64px;" src="/assets/img/logo_tools/mysqldump-secure.png" alt="Devilbox"/></a>
+  <a target="_blank" title="NodeJS" href="https://nodejs.org"><img width="64" style="width:64px;" src="/assets/img/logo_tools/nodejs.png" alt="Devilbox"/></a>
+  <a target="_blank" title="NPM" href="https://www.npmjs.com"><img width="64" style="width:64px;" src="/assets/img/logo_tools/npm.png" alt="Devilbox"/></a>
+  <a target="_blank" title="PHPUnit" href="https://phpunit.de/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/phpunit.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Sass" href="https://sass-lang.com/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/sass.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Webpack" href="https://webpack.js.org/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/webpack.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Yarn" href="https://yarnpkg.com/en/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/yarn.png" alt="Devilbox"/></a>
 </div>
+
 
 
 ### Supported Frameworks and CMS
@@ -242,160 +370,79 @@ $ docker-compose stop mysql
 <p class="center">There is nothing special about the devilbox, so any framework or CMS that will work with normal LAMP/MEAN stacks will work here as well. However in order to make double sure, a few popular applications have been explicitly tested.</p>
 
 <div class="center">
-  <a target="_blank" title="CakePHP" href="https://cakephp.org" ><img alt="CakePHP" class="battery" src="/assets/img/logos/64x64/cake.png" /></a>
-  <a target="_blank" title="Drupal" href="https://www.drupal.org/" ><img alt="Drupal" class="battery" src="/assets/img/logos/64x64/drupal.png" /></a>
-  <a target="_blank" title="Laravel" href="https://laravel.com" ><img alt="Laravel" class="battery" src="/assets/img/logos/64x64/laravel.png" /></a>
-  <a target="_blank" title="PhalconPHP" href="https://phalconphp.com" ><img alt="PhalconPHP" class="battery" src="/assets/img/logos/64x64/phalcon.png" /></a>
-  <a target="_blank" title="Symfony" href="https://symfony.com" ><img alt="Symfony" class="battery" src="/assets/img/logos/64x64/symfony.png" /></a>
-  <a target="_blank" title="Wordpress" href="https://wordpress.org" ><img alt="Wordpress" class="battery" src="/assets/img/logos/64x64/wordpress.png" /></a>
-  <a target="_blank" title="Yii" href="http://www.yiiframework.com" ><img alt="Yii" class="battery" src="/assets/img/logos/64x64/yii.png" /></a>
-  <a target="_blank" title="Zend Framework" href="https://framework.zend.com" ><img alt="Zend Framework" class="battery" src="/assets/img/logos/64x64/zend.png" /></a>
+  <a target="_blank" title="CakePHP" href="https://cakephp.org"><img width="64" style="width:64px" src="/assets/img/logo_fw/cake.png" alt="Devilbox"/></a>
+  <a target="_blank" title="CodeIgniter" href="https://www.codeigniter.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/codeigniter.png" alt="Devilbox"/></a>
+  <a target="_blank" title="CraftCMS" href="https://craftcms.com/"><img width="64" style="width:64px" src="/assets/img/logo_fw/craftcms.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Drupal" href="https://www.drupal.org"><img width="64" style="width:64px" src="/assets/img/logo_fw/drupal.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Joomla" href="https://www.joomla.org"><img width="64" style="width:64px" src="/assets/img/logo_fw/joomla.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Laravel" href="https://laravel.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/laravel.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Magento" href="https://magento.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/magento.png" alt="Devilbox"/></a>
+  <a target="_blank" title="PhalconPHP" href="https://phalconphp.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/phalcon.png" alt="Devilbox"/></a>
+  <a target="_blank" title="PhotonCMS" href="https://photoncms.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/photoncms.png" alt="Devilbox"/></a>
+  <a target="_blank" title="PrestaShop" href="https://www.prestashop.com/en"><img width="64" style="width:64px" src="/assets/img/logo_fw/prestashop.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Shopware" href="https://en.shopware.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/shopware.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Symfony" href="https://symfony.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/symfony.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Typo3" href="https://typo3.org"><img width="64" style="width:64px" src="/assets/img/logo_fw/typo3.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Wordpress" href="https://wordpress.org"><img width="64" style="width:64px" src="/assets/img/logo_fw/wordpress.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Yii" href="http://www.yiiframework.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/yii.png" alt="Devilbox"/></a>
+  <a target="_blank" title="Zend" href="https://framework.zend.com"><img width="64" style="width:64px" src="/assets/img/logo_fw/zend.png" alt="Devilbox"/></a>
 </div>
 
+> **Documentation:**<br/>
+> [Setup CakePHP](https://devilbox.readthedocs.io/en/latest/examples/setup-cakephp.html) |
+> [Setup CodeIgniter](https://devilbox.readthedocs.io/en/latest/examples/setup-codeigniter.html) |
+> [Setup CraftCMS](https://devilbox.readthedocs.io/en/latest/examples/setup-craftcms.html) |
+> [Setup Drupal](https://devilbox.readthedocs.io/en/latest/examples/setup-drupal.html) |
+> [Setup Joomla](https://devilbox.readthedocs.io/en/latest/examples/setup-joomla.html) |
+> [Setup Laravel](https://devilbox.readthedocs.io/en/latest/examples/setup-laravel.html) |
+> [Setup Magento](https://devilbox.readthedocs.io/en/latest/examples/setup-magento.html) |
+> [Setup PhalconPHP](https://devilbox.readthedocs.io/en/latest/examples/setup-phalcon.html) |
+> [Setup PhotonCMS](https://devilbox.readthedocs.io/en/latest/examples/setup-photon-cms.html) |
+> [Setup PrestaShop](https://devilbox.readthedocs.io/en/latest/examples/setup-presta-shop.html) |
+> [Setup Shopware](https://devilbox.readthedocs.io/en/latest/examples/setup-shopware.html) |
+> [Setup Symfony](https://devilbox.readthedocs.io/en/latest/examples/setup-symfony.html) |
+> [Setup Typo3](https://devilbox.readthedocs.io/en/latest/examples/setup-typo3.html) |
+> [Setup Wordpress](https://devilbox.readthedocs.io/en/latest/examples/setup-wordpress.html) |
+> [Setup Yii](https://devilbox.readthedocs.io/en/latest/examples/setup-yii.html) |
+> [Setup Zend](https://devilbox.readthedocs.io/en/latest/examples/setup-zend.html)
 
-### Documentation
 
-<p class="center">If you don't know where to start or just want to see what is possible and how it is done, browse the documentations below. The devilbox is well explained, features many examples and even gives a technical background for customizations.</p>
+### Community
 
-<div style="text-align:center;">
-<div style="width:300px;display;inline-block;text-align:left;margin-left:auto; margin-right:auto; ">
-<ol>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md" >Overview</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#1-main-idea" >Main idea</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#2-features" >Features</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#3-supported-host-os" >Supported Host OS</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#4-requirements" >Requirements</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#5-docker-documentation" >Docker documentation</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#6-devilbox-documentation" >Devilbox documentation</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#7-video-tutorials" >Video Tutorials</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#8-available-php-modules" >Available PHP Modules</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/README.md#9-supported-frameworks-and-cms" >Supported Frameworks and CMS</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md" >Quickstart</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md#1-installation" >Installation</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md#2-update" >Update</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md#3-configuration" >Configuration</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md#4-run" >Run</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md#5-project-setup" >Project setup</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md#6-enter-the-php-docker-container" >Enter the PHP Docker container</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Install.md" >Install</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Install.md#1-install-docker" >Install Docker</a>
-      <ol>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Install.md#11-linux" >Linux</a></li>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Install.md#12-windows" >Windows</a></li>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Install.md#13-osx" >OSX</a></li>
-      </ol>
-    </li>
-	<li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Install.md#2-install-devilbox" >Install Devilbox</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Update.md" >Update</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Update.md#1-tldr" >TL;DR</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Update.md#2-git-tag-vs-master-branch" >Git tag vs master branch</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Update.md#3-compare-env-file" >Compare .env file</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Update.md#4-pull-new-docker-container-important" >Pull new Docker container (Important!)</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Update.md#5-remove-anonymous-volumes" >Remove anonymous volumes</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md" >Configure</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md#1-overview" >Overview</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md#2-devilbox-general-settings" >Devilbox general settings</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md#3-project-settings" >Project settings</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md#4-container-settings" >Container settings</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md#5-intranet-settings" >Intranet settings</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Configure.md#6-host-computer" >Host computer</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Run.md" >Run</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Run.md#1-start-the-devilbox" >Start the devilbox</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Run.md#2-stop-the-devilbox" >Stop the devilbox</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Run.md#3-attachdetach-during-run-time" >Attach/Detach during run-time</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Run.md#4-docker-logs" >Docker logs</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md" >Usage</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#1-mounted-directories" >Mounted directories</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#2-work-on-the-docker-host" >Work on the Docker host</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#3-work-inside-the-php-container" >Work inside the PHP container</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#4-managing-projects-explained" >Managing Projects explained</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#5-creating-new-projetcs" >Creating new Projects</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#6-switching-container-versions" >Switching container versions</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#7-emails" >Emails</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#8-log-files" >Log files</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Usage.md#9-intranet" >Intranet</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/OS.md" >OS</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/OS.md#1-linux" >Linux</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/OS.md#2-windows" >Windows</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/OS.md#3-osx" >OSX</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md" >Backups</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#1-info" >Info</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#2-mysql" >MySQL</a>
-      <ol>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#21-mysql-database-backup" >MySQL Database Backup</a></li>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#22-mysql-database-restore" >MySQL Database Restore</a></li>
-      </ol>
-    </li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#3-postgresql" >PostgreSQL</a>
-      <ol>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#31-postgresql-database-backup" >PostgreSQL Database Backup</a></li>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#32-postgresql-database-restore" >PostgreSQL Database Restore</a></li>
-      </ol>
-    </li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#4-mongodb" >MongoDB</a>
-      <ol>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#41-mongodb-database-backup" >MongoDB Database Backup</a></li>
-        <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Backups.md#42-mongodb-database-restore" >MongoDB Database Restore</a></li>
-      </ol>
-    </li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md" >Examples</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#1-introduction" >Introduction</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#2-setup-cakephp" >Setup CakePHP</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#3-setup-drupal" >Setup Drupal</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#4-setup-laravel" >Setup Laravel</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#5-setup-phalcon" >Setup Phalcon</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#6-setup-symfony" >Setup Symfony</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#7-setup-wordpress" >Setup Wordpress</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#8-setup-yii" >Setup Yii</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Examples.md#9-setup-zend" >Setup Zend</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Technical.md" >Technical</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Technical.md#1-networking" >Networking</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Technical.md#2-ports-and-forwarding" >Ports and forwarding</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Technical.md#3-works-the-same-on-host-and-php-container" >Works the same on Host and PHP Container</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/Hacking.md" >Hacking</a></strong>
-  <ol>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Hacking.md#1-rebuilding-bundled-docker-container" >Rebuilding bundled Docker container</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Hacking.md#2-customizing-the-bundled-docker-container" >Customizing the bundled Docker container</a></li>
-    <li><a href="https://github.com/cytopia/devilbox/blob/master/docs/Hacking.md#3-adding-your-own-docker-container" >Adding your own Docker container</a></li>
-  </ol>
-</li>
-<li><strong><a href="https://github.com/cytopia/devilbox/blob/master/docs/FAQ.md" >FAQ</a></strong></li>
-</ol>
-</div>
-</div>
+<p class="center">Find documentation and help here.</p>
+
+<table width="100%" style="width:100%; display:table;">
+ <thead>
+  <tr>
+   <th width="33%" style="width:33%;"><a href="https://devilbox.readthedocs.io" >Documentation</a></th>
+   <th width="33%" style="width:33%;"><a href="https://gitter.im/devilbox/Lobby" >Chat</a></th>
+   <th width="33%" style="width:33%;">Forum</th>
+  </tr>
+ </thead>
+ <tbody style="vertical-align: middle; text-align: center;">
+  <tr>
+   <td>
+    <a href="https://devilbox.readthedocs.io">
+	 <img title="Documentation" name="Documentation" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/readthedocs.png" />
+    </a>
+   </td>
+   <td>
+    <a href="https://gitter.im/devilbox/Lobby">
+     <img title="Chat on Gitter" name="Chat on Gitter" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/gitter.png" />
+    </a>
+   </td>
+   <td>
+    <img title="Forum" name="Forum" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/discourse.png" />
+   </td>
+  </tr>
+  <tr>
+  <td><a href="https://devilbox.readthedocs.io">devilbox.readthedocs.io</a></td>
+  <td><a href="https://gitter.im/devilbox/Lobby">gitter.im/devilbox</a></td>
+  <td>coming soon</td>
+  </tr>
+ </tbody>
+</table>
+
 
 ### Devilbox Intranet
 
@@ -416,7 +463,7 @@ $ docker-compose stop mysql
 
 ### Up-to-dateness
 
-<p class="center">Docker containers are pushed to <a target="_blank" href="https://hub.docker.com/r/cytopia">Docker Hub</a> frequently.<br/>It should be enough for you to pull updated images on a regeular basis.</p>
+<p class="center">Docker containers are pushed to <a target="_blank" href="https://hub.docker.com/r/devilbox">Docker Hub</a> frequently.<br/>It should be enough for you to pull updated images on a regeular basis.</p>
 
 ```shell
 $ docker-compose pull
@@ -435,10 +482,6 @@ $ ./build/docker-rebuild.sh
 
 
 ### Integration Tests
-
-<div class="center">
-  <a target="_blank" href="https://travis-ci.org/cytopia/devilbox"><img src="https://travis-ci.org/cytopia/devilbox.svg?branch=master" /></a>
-</div>
 
 <p class="center">In order to make sure everything always runs stable and as expected, the devilbox makes heavy use of integration tests. You can head over to <a target="_blank" href="https://travis-ci.org/cytopia/devilbox">Travis-CI</a> and have a look at stable and nightly builds.</p>
 
@@ -460,6 +503,6 @@ $ ./build/docker-rebuild.sh
 
 <div class="center">
   <p>MIT License</p>
-  <p>Copyright (c) 2016-2017 cytopia</p>
+  <p>Copyright (c) 2016-2018 cytopia</p>
 </div>
 
