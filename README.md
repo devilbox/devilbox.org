@@ -416,7 +416,7 @@ $ docker-compose stop mysql
   <tr>
    <th width="33%" style="width:33%;"><a href="https://devilbox.readthedocs.io" >Documentation</a></th>
    <th width="33%" style="width:33%;"><a href="https://gitter.im/devilbox/Lobby" >Chat</a></th>
-   <th width="33%" style="width:33%;">Forum</th>
+   <th width="33%" style="width:33%;"><a href="https://devilbox.discourse.group/">Forum</a></th>
   </tr>
  </thead>
  <tbody style="vertical-align: middle; text-align: center;">
@@ -432,13 +432,15 @@ $ docker-compose stop mysql
     </a>
    </td>
    <td>
-    <img title="Forum" name="Forum" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/discourse.png" />
+    <a href="https://devilbox.discourse.group/">
+     <img title="Forum" name="Forum" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/discourse.png" />
+    </a>
    </td>
   </tr>
   <tr>
   <td><a href="https://devilbox.readthedocs.io">devilbox.readthedocs.io</a></td>
   <td><a href="https://gitter.im/devilbox/Lobby">gitter.im/devilbox</a></td>
-  <td>coming soon</td>
+  <td><a href="https://devilbox.discourse.group/">devilbox.discourse.group</a></td>
   </tr>
  </tbody>
 </table>
