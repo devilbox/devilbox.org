@@ -107,9 +107,9 @@ C:\devilbox> docker-compose up</pre></td>
       <td><a target="_blank" title="MySQL 5.5"        href="https://github.com/cytopia/docker-mysql-5.5">5.5</a></td>
       <td><a target="_blank" title="MariaDB 5.5"      href="https://github.com/cytopia/docker-mariadb-5.5">5.5</a></td>
       <td><a target="_blank" title="PerconaDB 5.5"    href="https://github.com/cytopia/docker-percona-5.5">5.5</a></td>
-      <td><a target="_blank" title="PgSQL 9.1"        href="https://github.com/docker-library/postgres">9.1</a></td>
+      <td><a target="_blank" title="PgSQL 9.0"        href="https://github.com/docker-library/postgres">9.0</a></td>
       <td><a target="_blank" title="Redis 2.8"        href="https://github.com/docker-library/redis">2.8</a></td>
-      <td><a target="_blank" title="Memcached 1.4.21" href="https://github.com/docker-library/memcached">1.4.21</a></td>
+      <td><a target="_blank" title="Memcached 1.4"    href="https://github.com/docker-library/memcached">1.4</a></td>
       <td><a target="_blank" title="MongoDB 2.8"      href="https://github.com/docker-library/mongo">2.8</a></td>
     </tr>
     <tr>
@@ -119,9 +119,9 @@ C:\devilbox> docker-compose up</pre></td>
       <td><a target="_blank" title="MySQL 5.6"        href="https://github.com/cytopia/docker-mysql-5.6">5.6</a></td>
       <td><a target="_blank" title="MariaDB 10.0"     href="https://github.com/cytopia/docker-mariadb-10.0">10.0</a></td>
       <td><a target="_blank" title="PerconaDB 5.6"    href="https://github.com/cytopia/docker-percona-5.6">5.6</a></td>
-      <td><a target="_blank" title="PgSQL 9.2"        href="https://github.com/docker-library/postgres">9.2</a></td>
+      <td><a target="_blank" title="PgSQL 9.1"        href="https://github.com/docker-library/postgres">9.1</a></td>
       <td><a target="_blank" title="Redis 3.0"        href="https://github.com/docker-library/redis">3.0</a></td>
-      <td><a target="_blank" title="Memcached 1.4.22" href="https://github.com/docker-library/memcached">1.4.22</a></td>
+      <td><a target="_blank" title="Memcached 1.5"    href="https://github.com/docker-library/memcached">1.5</a></td>
       <td><a target="_blank" title="MongoDB 3.0"      href="https://github.com/docker-library/mongo">3.0</a></td>
     </tr>
     <tr>
@@ -131,9 +131,9 @@ C:\devilbox> docker-compose up</pre></td>
       <td><a target="_blank" title="MySQL 5.7"        href="https://github.com/cytopia/docker-mysql-5.7">5.7</a></td>
       <td><a target="_blank" title="MariaDB 10.1"     href="https://github.com/cytopia/docker-mariadb-10.1">10.1</a></td>
       <td><a target="_blank" title="PerconaDB 5.7"    href="https://github.com/cytopia/docker-percona-5.7">5.7</a></td>
-      <td><a target="_blank" title="PgSQL 9.3"        href="https://github.com/docker-library/postgres">9.3</a></td>
+      <td><a target="_blank" title="PgSQL 9.2"        href="https://github.com/docker-library/postgres">9.2</a></td>
       <td><a target="_blank" title="Redis 3.2"        href="https://github.com/docker-library/redis">3.2</a></td>
-      <td><a target="_blank" title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.23</a></td>
+      <td><a target="_blank" title="Memcached latest" href="https://github.com/docker-library/memcached">latest</a></td>
       <td><a target="_blank" title="MongoDB 3.2"      href="https://github.com/docker-library/mongo">3.2</a></td>
     </tr>
     <tr>
@@ -142,10 +142,10 @@ C:\devilbox> docker-compose up</pre></td>
       <td><a target="_blank" title="PHP 5.5"          href="https://github.com/devilbox/docker-php-fpm">5.5</a></td>
       <td><a target="_blank" title="MySQL 8.0"        href="https://github.com/cytopia/docker-mysql-8.0">8.0</a></td>
       <td><a target="_blank" title="MariaDB 10.2"     href="https://github.com/cytopia/docker-mariadb-10.2">10.2</a></td>
-      <td></td>
-      <td><a target="_blank" title="PgSQL 9.4"        href="https://github.com/docker-library/postgres">9.4</a></td>
+      <td><a target="_blank" title="PerconaDB 8.0"    href="https://github.com/devilbox/docker-mysql">8.0</a></td>
+      <td><a target="_blank" title="PgSQL 9.3"        href="https://github.com/docker-library/postgres">9.3</a></td>
       <td><a target="_blank" title="Redis 4.0"        href="https://github.com/docker-library/redis">4.0</a></td>
-      <td><a target="_blank" title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.24</a></td>
+      <td></td>
       <td><a target="_blank" title="MongoDB 3.4"      href="https://github.com/docker-library/mongo">3.4</a></td>
     </tr>
     <tr>
@@ -155,22 +155,22 @@ C:\devilbox> docker-compose up</pre></td>
       <td></td>
       <td><a target="_blank" title="MariaDB 10.3"     href="https://github.com/cytopia/docker-mariadb-10.3">10.3</a></td>
       <td></td>
-      <td><a target="_blank" title="PgSQL 9.5"        href="https://github.com/docker-library/postgres">9.5</a></td>
+      <td><a target="_blank" title="PgSQL 9.4"        href="https://github.com/docker-library/postgres">9.4</a></td>
+      <td><a target="_blank" title="Redis 5.0"        href="https://github.com/docker-library/redis">5.0</a></td>
       <td></td>
-      <td>...</td>
-      <td><a target="_blank" title="MongoDB 3.5"      href="https://github.com/docker-library/mongo">3.5</a></td>
+      <td><a target="_blank" title="MongoDB 3.6"      href="https://github.com/docker-library/mongo">3.6</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
       <td><a target="_blank" title="PHP 7.0"          href="https://github.com/devilbox/docker-php-fpm">7.0</a></td>
       <td></td>
+      <td><a target="_blank" title="MariaDB 10.4"     href="https://github.com/devilbox/docker-mysql">10.4</a></td>
       <td></td>
+      <td><a target="_blank" title="PgSQL 9.5"        href="https://github.com/docker-library/postgres">9.5</a></td>
+      <td><a target="_blank" title="Redis 6.0"        href="https://github.com/docker-library/redis">6.0</a></td>
       <td></td>
-      <td><a target="_blank" title="PgSQL 9.6"        href="https://github.com/docker-library/postgres">9.6</a></td>
-      <td></td>
-      <td><a target="_blank" title="Memcached 1.5.2"  href="https://github.com/docker-library/memcached">1.5.2</a></td>
-      <td></td>
+      <td><a target="_blank" title="MongoDB 4.0"      href="https://github.com/docker-library/mongo">4.0</a></td>
     </tr>
     <tr>
       <td></td>
@@ -179,10 +179,10 @@ C:\devilbox> docker-compose up</pre></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PgSQL 10.0"       href="https://github.com/docker-library/postgres">10.0</a></td>
+      <td><a target="_blank" title="PgSQL 9.6"        href="https://github.com/docker-library/postgres">9.6</a></td>
+      <td><a target="_blank" title="Redis latest"     href="https://github.com/docker-library/redis">latest</a></td>
       <td></td>
-      <td><a target="_blank" title="Memcached latest" href="https://github.com/docker-library/memcached">latest</a></td>
-      <td></td>
+      <td><a target="_blank" title="MongoDB 4.2"      href="https://github.com/docker-library/mongo">4.2</a></td>
     </tr>
     <tr>
       <td></td>
@@ -191,10 +191,10 @@ C:\devilbox> docker-compose up</pre></td>
       <td></td>
       <td></td>
       <td></td>
+      <td>...</td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><a target="_blank" title="MongoDB latest"   href="https://github.com/docker-library/mongo">latest</a></td>
     </tr>
     <tr>
       <td></td>
@@ -203,7 +203,31 @@ C:\devilbox> docker-compose up</pre></td>
       <td></td>
       <td></td>
       <td></td>
+      <td><a target="_blank" title="PgSQL 12.0"       href="https://github.com/docker-library/postgres">12.0</a></td>
       <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 7.4"          href="https://github.com/devilbox/docker-php-fpm">7.4</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 12.1"       href="https://github.com/docker-library/postgres">12.1</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 8.0"          href="https://github.com/devilbox/docker-php-fpm">8.0</a><sup>[2]</sup></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL latest"     href="https://github.com/docker-library/postgres">latest</a></td>
       <td></td>
       <td></td>
       <td></td>
@@ -213,6 +237,8 @@ C:\devilbox> docker-compose up</pre></td>
 
 <p class="center"> <strong><sup>[1]</sup></strong> <strong>PHP 5.2</strong> is available to use, but it is not officially supported. The Devilbox intranet does not work with this version as PHP 5.2 does not support namespaces.
 Furthermore PHP 5.2 does only work with Apache 2.4, Nginx stable and Nginx mainline. It does not work with Apache 2.2. Use at your own risk.</p>
+
+<p class="center"> <strong><sup>[2]</sup></strong> <strong>PHP 8.0</strong> is an upcoming unreleased versions of PHP, which are directly built out of their <a href="https://github.com/php/php-src/">official git branches</a> every night to assure you will leverage their latest features.</p>
 
 
 ### Additional services
@@ -227,26 +253,59 @@ Furthermore PHP 5.2 does only work with Apache 2.4, Nginx stable and Nginx mainl
 <table>
  <thead>
   <tr>
+   <th>Blackfire</th>
+   <th>ELK</th>
    <th>MailHog</th>
+   <th>Ngrok</th>
    <th>RabbitMQ</th>
+   <th>Solr</th>
+   <th>HAProxy</th>
+   <th>Varnish</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td>v1.0.0</td>
-   <td>3.6</td>
+   <td><a target="_blank" title="Blackfire 1.8"    href="https://github.com/blackfireio/docker">1.8</a></td>
+   <td><a target="_blank" title="ELK stack"        href="https://www.docker.elastic.co">5.x.y</a></td>
+   <td><a target="_blank" title="MailHog v1.0.0"   href="https://github.com/mailhog/MailHog">v1.0.0</a></td>
+   <td><a target="_blank" title="Ngrok 2.x"        href="https://github.com/devilbox/docker-ngrok">2.x</a></td>
+   <td><a target="_blank" title="RabbitMQ 3.6"     href="https://github.com/rabbitmq/rabbitmq-server">3.6</a></td>
+   <td><a target="_blank" title="Solr 5"           href="https://github.com/apache/lucene-solr">5</a></td>
+   <td><a target="_blank" title="HAProxy 1.x"      href="https://github.com/devilbox/docker-haproxy">1.x</a></td>
+   <td><a target="_blank" title="Varnish 4"        href="https://github.com/devilbox/docker-varnish">4</a></td>
   </tr>
   <tr>
-   <td>latest</td>
-   <td>3.7</td>
-  </tr>
-  <tr>
+   <td>...</td>
+   <td><a target="_blank" title="ELK stack"        href="https://www.docker.elastic.co">6.x.y</a></td>
+   <td><a target="_blank" title="MailHog latest"   href="https://github.com/mailhog/MailHog">latest</a></td>
    <td></td>
-   <td>latest</td>
+   <td><a target="_blank" title="RabbitMQ 3.7"     href="https://github.com/rabbitmq/rabbitmq-server">3.7</a></td>
+   <td><a target="_blank" title="Solr 6"           href="https://github.com/apache/lucene-solr">6</a></td>
+   <td></td>
+   <td><a target="_blank" title="Varnish 5"        href="https://github.com/devilbox/docker-varnish">5</a></td>
+  </tr>
+  <tr>
+   <td><a target="_blank" title="Blackfire 1.18.0" href="https://github.com/blackfireio/docker">1.18.0</a></td>
+   <td><a target="_blank" title="ELK stack"        href="https://www.docker.elastic.co">7.x.y</a></td>
+   <td></td>
+   <td></td>
+   <td><a target="_blank" title="RabbitMQ latest"  href="https://github.com/rabbitmq/rabbitmq-server">latest</a></td>
+   <td><a target="_blank" title="Solr 7"           href="https://github.com/apache/lucene-solr">7</a></td>
+   <td></td>
+   <td><a target="_blank" title="Varnish 6"        href="https://github.com/devilbox/docker-varnish">6</a></td>
+  </tr>
+  <tr>
+   <td><a target="_blank" title="Blackfire latest" href="https://github.com/blackfireio/docker">latest</a></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td><a target="_blank" title="Solr latest"      href="https://github.com/apache/lucene-solr">latest</a></td>
+   <td></td>
+   <td><a target="_blank" title="Varnish latest"   href="https://github.com/devilbox/docker-varnish">latest</a></td>
   </tr>
  </tbody>
 </table>
-
 
 
 ### Run only what you need
@@ -268,6 +327,7 @@ $ docker-compose up redis
 # Stop MySQL from the current stack
 $ docker-compose stop mysql
 ```
+
 
 ### Introduction Videos
 
@@ -295,7 +355,9 @@ $ docker-compose stop mysql
   <strong><a title="PHP 7.0" href="https://github.com/devilbox/docker-php-fpm">PHP 7.0</a></strong> |
   <strong><a title="PHP 7.1" href="https://github.com/devilbox/docker-php-fpm">PHP 7.1</a></strong> |
   <strong><a title="PHP 7.2" href="https://github.com/devilbox/docker-php-fpm">PHP 7.2</a></strong> |
-  <strong><a title="PHP 7.3" href="https://github.com/devilbox/docker-php-fpm">PHP 7.3</a></strong>
+  <strong><a title="PHP 7.3" href="https://github.com/devilbox/docker-php-fpm">PHP 7.3</a></strong> |
+  <strong><a title="PHP 7.4" href="https://github.com/devilbox/docker-php-fpm">PHP 7.4</a></strong> |
+  <strong><a title="PHP 8.0" href="https://github.com/devilbox/docker-php-fpm">PHP 8.0</a></strong>
   </p>
 <p>amqp, apcu, bcmath, bz2, calendar, Core, ctype, curl, date, dba, dom, enchant, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, interbase, intl, json, ldap, libxml, mbstring, mcrypt, memcache, memcached, mongodb, msgpack, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_dblib, PDO_Firebird, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, phalcon, Phar, posix, pspell, readline, recode, redis, Reflection, session, shmop, SimpleXML, snmp, soap, sockets, sodium, SPL, sqlite3, standard, swoole, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uploadprogress, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib</p>
 </div>
@@ -362,7 +424,6 @@ $ docker-compose stop mysql
   <a target="_blank" title="Webpack" href="https://webpack.js.org/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/webpack.png" alt="Devilbox"/></a>
   <a target="_blank" title="Yarn" href="https://yarnpkg.com/en/"><img width="64" style="width:64px;" src="/assets/img/logo_tools/yarn.png" alt="Devilbox"/></a>
 </div>
-
 
 
 ### Supported Frameworks and CMS
@@ -505,6 +566,5 @@ $ ./build/docker-rebuild.sh
 
 <div class="center">
   <p>MIT License</p>
-  <p>Copyright (c) 2016-2018 cytopia</p>
+  <p>Copyright (c) 2016-2020 cytopia</p>
 </div>
-
