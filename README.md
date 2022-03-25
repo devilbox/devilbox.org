@@ -1,13 +1,13 @@
 # Devilbox
 
-**[Quickstart](https://github.com/cytopia/devilbox/blob/master/docs/Quickstart.md)**｜**[Install](https://github.com/cytopia/devilbox/blob/master/docs/Install.md)**｜**[Update](https://github.com/cytopia/devilbox/blob/master/docs/Update.md)**｜**[Configure](https://github.com/cytopia/devilbox/blob/master/docs/Configure.md)**｜**[Run](https://github.com/cytopia/devilbox/blob/master/docs/Run.md)**｜**[Usage](https://github.com/cytopia/devilbox/blob/master/docs/Usage.md)**｜**[OS](https://github.com/cytopia/devilbox/blob/master/docs/OS.md)**｜**[Backups](https://github.com/cytopia/devilbox/blob/master/docs/Backups.md)**｜**[Examples](https://github.com/cytopia/devilbox/blob/master/docs/Examples.md)**｜**[Technical](https://github.com/cytopia/devilbox/blob/master/docs/Technical.md)**｜**[Hacking](https://github.com/cytopia/devilbox/blob/master/docs/Hacking.md)**｜**[FAQ](https://github.com/cytopia/devilbox/blob/master/docs/FAQ.md)**
+**[Quickstart](#install-configure-and-start)**｜**[Install](https://devilbox.readthedocs.io/en/latest/getting-started/install-the-devilbox.html)**｜**[Update](https://devilbox.readthedocs.io/en/latest/maintenance/update-the-devilbox.html)**｜**[Configure](https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html)**｜**[Run](https://github.com/cytopia/devilbox/blob/master/docs/Run.md)**｜**[Usage](#install-configure-and-start)**｜**[OS](#supported-host-os)**｜**[Backups](https://devilbox.readthedocs.io/en/latest/maintenance/remove-the-devilbox.html?highlight=backups#backups)**｜**[Segurança](#security)**｜**[FAQ](https://devilbox.readthedocs.io/en/latest/support/faq.html?highlight=FAQ)**
 
  <div class="center"><strong>Reproducable</strong> and identical development environment for <strong>all host operating</strong> systems with <strong>zero configuration</strong> requirements.</div>
 
 ---
 
 
-### Docker LAMP development stack with valid https support
+## Docker LAMP development stack with valid https support
 
 <div class="center">
   <img width="250" style="width:250px;" src="assets/img/https-ssl-address-bar.png" />
@@ -20,7 +20,7 @@ The Devilbox is a modern and highly customisable <strong>dockerized PHP stack</s
 <img src="assets/img/devilbox-dash.png" alt="Devilbox"/>
 
 
-### Supported Host OS
+## Supported Host OS
 
 <p class="center">Don't worry about switching computers. The devilbox will run on all major operating systems.</p>
 
@@ -31,7 +31,7 @@ The Devilbox is a modern and highly customisable <strong>dockerized PHP stack</s
 </div>
 
 
-### Install, Configure and Start
+## Install, Configure and Start
 
 <p class="center">
   <strong>Documentation:</strong>
@@ -76,7 +76,7 @@ C:\devilbox> docker-compose up</pre></td>
 </table>
 
 
-### Run exactly what you need
+## Run exactly what you need
 
 <p class="center">
   <strong>Documentation:</strong>
@@ -92,7 +92,7 @@ C:\devilbox> docker-compose up</pre></td>
       <th>PHP</th>
       <th>MySQL</th>
       <th>MariaDB</th>
-      <th>PerconaDB</th>
+      <th>Percona</th>
       <th>PgSQL</th>
       <th>Redis</th>
       <th>Memcached</th>
@@ -101,97 +101,121 @@ C:\devilbox> docker-compose up</pre></td>
   </thead>
   <tbody>
     <tr>
-      <td><a target="_blank" title="Apache 2.2"       href="https://github.com/devilbox/docker-apache-2.2">2.2</a></td>
-      <td><a target="_blank" title="Nginx stable"     href="https://github.com/devilbox/docker-nginx-stable">stable</a></td>
-      <td><a target="_blank" title="PHP 5.2"          href="https://github.com/devilbox/docker-php-fpm">5.2</a><sup>[1]</sup></td>
-      <td><a target="_blank" title="MySQL 5.5"        href="https://github.com/cytopia/docker-mysql-5.5">5.5</a></td>
-      <td><a target="_blank" title="MariaDB 5.5"      href="https://github.com/cytopia/docker-mariadb-5.5">5.5</a></td>
-      <td><a target="_blank" title="PerconaDB 5.5"    href="https://github.com/cytopia/docker-percona-5.5">5.5</a></td>
-      <td><a target="_blank" title="PgSQL 9.1"        href="https://github.com/docker-library/postgres">9.1</a></td>
-      <td><a target="_blank" title="Redis 2.8"        href="https://github.com/docker-library/redis">2.8</a></td>
-      <td><a target="_blank" title="Memcached 1.4.21" href="https://github.com/docker-library/memcached">1.4.21</a></td>
-      <td><a target="_blank" title="MongoDB 2.8"      href="https://github.com/docker-library/mongo">2.8</a></td>
+      <td><a target="_blank" title="Apache 2.2" href="https://github.com/devilbox/docker-apache-2.2">2.2</a></td>
+      <td><a target="_blank" title="Nginx stable" href="https://github.com/devilbox/docker-nginx-stable">stable</a></td>
+      <td><a target="_blank" title="PHP 5.2" href="https://github.com/devilbox/docker-php-fpm">5.2</a><sup>[1]</sup></td>
+      <td><a target="_blank" title="MySQL 5.5" href="https://github.com/devilbox/docker-mysql">5.5</a></td>
+      <td><a target="_blank" title="MariaDB 5.5" href="https://github.com/devilbox/docker-mysql">5.5</a></td>
+      <td><a target="_blank" title="PerconaDB 5.5" href="https://github.com/devilbox/docker-mysql">5.5</a></td>
+      <td><a target="_blank" title="PgSQL 9.0" href="https://github.com/docker-library/postgres">9.0</a></td>
+      <td><a target="_blank" title="Redis 2.8" href="https://github.com/docker-library/redis">2.8</a></td>
+      <td><a target="_blank" title="Memcached 1.4" href="https://github.com/docker-library/memcached">1.4</a></td>
+      <td><a target="_blank" title="MongoDB 2.8" href="https://github.com/docker-library/mongo">2.8</a></td>
     </tr>
     <tr>
-      <td><a target="_blank" title="Apache 2.4"       href="https://github.com/devilbox/docker-apache-2.4">2.4</a></td>
-      <td><a target="_blank" title="Nginx mainline"   href="https://github.com/devilbox/docker-nginx-mainline">mainline</a></td>
-      <td><a target="_blank" title="PHP 5.3"          href="https://github.com/devilbox/docker-php-fpm">5.3</a></td>
-      <td><a target="_blank" title="MySQL 5.6"        href="https://github.com/cytopia/docker-mysql-5.6">5.6</a></td>
-      <td><a target="_blank" title="MariaDB 10.0"     href="https://github.com/cytopia/docker-mariadb-10.0">10.0</a></td>
-      <td><a target="_blank" title="PerconaDB 5.6"    href="https://github.com/cytopia/docker-percona-5.6">5.6</a></td>
-      <td><a target="_blank" title="PgSQL 9.2"        href="https://github.com/docker-library/postgres">9.2</a></td>
-      <td><a target="_blank" title="Redis 3.0"        href="https://github.com/docker-library/redis">3.0</a></td>
-      <td><a target="_blank" title="Memcached 1.4.22" href="https://github.com/docker-library/memcached">1.4.22</a></td>
-      <td><a target="_blank" title="MongoDB 3.0"      href="https://github.com/docker-library/mongo">3.0</a></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td><a target="_blank" title="PHP 5.4"          href="https://github.com/devilbox/docker-php-fpm">5.4</a></td>
-      <td><a target="_blank" title="MySQL 5.7"        href="https://github.com/cytopia/docker-mysql-5.7">5.7</a></td>
-      <td><a target="_blank" title="MariaDB 10.1"     href="https://github.com/cytopia/docker-mariadb-10.1">10.1</a></td>
-      <td><a target="_blank" title="PerconaDB 5.7"    href="https://github.com/cytopia/docker-percona-5.7">5.7</a></td>
-      <td><a target="_blank" title="PgSQL 9.3"        href="https://github.com/docker-library/postgres">9.3</a></td>
-      <td><a target="_blank" title="Redis 3.2"        href="https://github.com/docker-library/redis">3.2</a></td>
-      <td><a target="_blank" title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.23</a></td>
-      <td><a target="_blank" title="MongoDB 3.2"      href="https://github.com/docker-library/mongo">3.2</a></td>
+      <td><a target="_blank" title="Apache 2.4" href="https://github.com/devilbox/docker-apache-2.4">2.4</a></td>
+      <td><a target="_blank" title="Nginx mainline" href="https://github.com/devilbox/docker-nginx-mainline">mainline</a></td>
+      <td><a target="_blank" title="PHP 5.3" href="https://github.com/devilbox/docker-php-fpm">5.3</a></td>
+      <td><a target="_blank" title="MySQL 5.6" href="https://github.com/devilbox/docker-mysql">5.6</a></td>
+      <td><a target="_blank" title="MariaDB 10.0" href="https://github.com/devilbox/docker-mysql">10.0</a></td>
+      <td><a target="_blank" title="PerconaDB 5.6" href="https://github.com/devilbox/docker-mysql">5.6</a></td>
+      <td><a target="_blank" title="PgSQL 9.1" href="https://github.com/docker-library/postgres">9.1</a></td>
+      <td><a target="_blank" title="Redis 3.0" href="https://github.com/docker-library/redis">3.0</a></td>
+      <td><a target="_blank" title="Memcached 1.5" href="https://github.com/docker-library/memcached">1.5</a></td>
+      <td><a target="_blank" title="MongoDB 3.0" href="https://github.com/docker-library/mongo">3.0</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PHP 5.5"          href="https://github.com/devilbox/docker-php-fpm">5.5</a></td>
-      <td><a target="_blank" title="MySQL 8.0"        href="https://github.com/cytopia/docker-mysql-8.0">8.0</a></td>
-      <td><a target="_blank" title="MariaDB 10.2"     href="https://github.com/cytopia/docker-mariadb-10.2">10.2</a></td>
-      <td></td>
-      <td><a target="_blank" title="PgSQL 9.4"        href="https://github.com/docker-library/postgres">9.4</a></td>
-      <td><a target="_blank" title="Redis 4.0"        href="https://github.com/docker-library/redis">4.0</a></td>
-      <td><a target="_blank" title="Memcached 1.4.23" href="https://github.com/docker-library/memcached">1.4.24</a></td>
-      <td><a target="_blank" title="MongoDB 3.4"      href="https://github.com/docker-library/mongo">3.4</a></td>
+      <td><a target="_blank" title="PHP 5.4" href="https://github.com/devilbox/docker-php-fpm">5.4</a></td>
+      <td><a target="_blank" title="MySQL 5.7" href="https://github.com/devilbox/docker-mysql">5.7</a></td>
+      <td><a target="_blank" title="MariaDB 10.1" href="https://github.com/devilbox/docker-mysql">10.1</a></td>
+      <td><a target="_blank" title="PerconaDB 5.7" href="https://github.com/devilbox/docker-mysql">5.7</a></td>
+      <td><a target="_blank" title="PgSQL 9.2" href="https://github.com/docker-library/postgres">9.2</a></td>
+      <td><a target="_blank" title="Redis 3.2" href="https://github.com/docker-library/redis">3.2</a></td>
+      <td><a target="_blank" title="Memcached 1.6" href="https://github.com/docker-library/memcached">1.6</a></td>
+      <td><a target="_blank" title="MongoDB 3.2" href="https://github.com/docker-library/mongo">3.2</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PHP 5.6"          href="https://github.com/devilbox/docker-php-fpm">5.6</a></td>
+      <td><a target="_blank" title="PHP 5.5" href="https://github.com/devilbox/docker-php-fpm">5.5</a></td>
+      <td><a target="_blank" title="MySQL 8.0" href="https://github.com/devilbox/docker-mysql">8.0</a></td>
+      <td><a target="_blank" title="MariaDB 10.2" href="https://github.com/devilbox/docker-mysql">10.2</a></td>
+      <td><a target="_blank" title="PerconaDB 8.0" href="https://github.com/devilbox/docker-mysql">8.0</a></td>
+      <td><a target="_blank" title="PgSQL 9.3" href="https://github.com/docker-library/postgres">9.3</a></td>
+      <td><a target="_blank" title="Redis 4.0" href="https://github.com/docker-library/redis">4.0</a></td>
+      <td><a target="_blank" title="Memcached latest" href="https://github.com/docker-library/memcached">latest</a></td>
+      <td><a target="_blank" title="MongoDB 3.4" href="https://github.com/docker-library/mongo">3.4</a></td>
+    </tr>
+    <tr>
       <td></td>
-      <td><a target="_blank" title="MariaDB 10.3"     href="https://github.com/cytopia/docker-mariadb-10.3">10.3</a></td>
       <td></td>
-      <td><a target="_blank" title="PgSQL 9.5"        href="https://github.com/docker-library/postgres">9.5</a></td>
+      <td><a target="_blank" title="PHP 5.6" href="https://github.com/devilbox/docker-php-fpm">5.6</a></td>
+      <td></td>
+      <td><a target="_blank" title="MariaDB 10.3" href="https://github.com/devilbox/docker-mysql">10.3</a></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 9.4" href="https://github.com/docker-library/postgres">9.4</a></td>
+      <td><a target="_blank" title="Redis 5.0" href="https://github.com/docker-library/redis">5.0</a></td>
+      <td></td>
+      <td><a target="_blank" title="MongoDB 3.6" href="https://github.com/docker-library/mongo">3.6</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 7.0" href="https://github.com/devilbox/docker-php-fpm">7.0</a></td>
+      <td></td>
+      <td><a target="_blank" title="MariaDB 10.4" href="https://github.com/devilbox/docker-mysql">10.4</a></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 9.5" href="https://github.com/docker-library/postgres">9.5</a></td>
+      <td><a target="_blank" title="Redis 6.0" href="https://github.com/docker-library/redis">6.0</a></td>
+      <td></td>
+      <td><a target="_blank" title="MongoDB 4.0" href="https://github.com/docker-library/mongo">4.0</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 7.1" href="https://github.com/devilbox/docker-php-fpm">7.1</a></td>
+      <td></td>
+      <td><a target="_blank" title="MariaDB 10.5" href="https://github.com/devilbox/docker-mysql">10.5</a></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 9.6" href="https://github.com/docker-library/postgres">9.6</a></td>
+      <td><a target="_blank" title="Redis latest" href="https://github.com/docker-library/redis">latest</a></td>
+      <td></td>
+      <td><a target="_blank" title="MongoDB 4.2" href="https://github.com/docker-library/mongo">4.2</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 7.2" href="https://github.com/devilbox/docker-php-fpm">7.2</a></td>
+      <td></td>
+      <td><a target="_blank" title="MariaDB 10.6" href="https://github.com/devilbox/docker-mysql">10.6</a></td>
       <td></td>
       <td>...</td>
-      <td><a target="_blank" title="MongoDB 3.5"      href="https://github.com/docker-library/mongo">3.5</a></td>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="MongoDB 4.4" href="https://github.com/docker-library/mongo">4.4</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PHP 7.0"          href="https://github.com/devilbox/docker-php-fpm">7.0</a></td>
+      <td><a target="_blank" title="PHP 7.3" href="https://github.com/devilbox/docker-php-fpm">7.3</a></td>
+      <td></td>
+      <td><a target="_blank" title="MariaDB 10.7" href="https://github.com/devilbox/docker-mysql">10.7</a></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 12.3" href="https://github.com/docker-library/postgres">12.3</a></td>
       <td></td>
       <td></td>
-      <td></td>
-      <td><a target="_blank" title="PgSQL 9.6"        href="https://github.com/docker-library/postgres">9.6</a></td>
-      <td></td>
-      <td><a target="_blank" title="Memcached 1.5.2"  href="https://github.com/docker-library/memcached">1.5.2</a></td>
-      <td></td>
+      <td><a target="_blank" title="MongoDB latest" href="https://github.com/docker-library/mongo">latest</a></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PHP 7.1"          href="https://github.com/devilbox/docker-php-fpm">7.1</a></td>
+      <td><a target="_blank" title="PHP 7.4" href="https://github.com/devilbox/docker-php-fpm">7.4</a></td>
       <td></td>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PgSQL 10.0"       href="https://github.com/docker-library/postgres">10.0</a></td>
-      <td></td>
-      <td><a target="_blank" title="Memcached latest" href="https://github.com/docker-library/memcached">latest</a></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td><a target="_blank" title="PHP 7.2"          href="https://github.com/devilbox/docker-php-fpm">7.2</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><a target="_blank" title="PgSQL 12.4" href="https://github.com/docker-library/postgres">12.4</a></td>
       <td></td>
       <td></td>
       <td></td>
@@ -199,7 +223,31 @@ C:\devilbox> docker-compose up</pre></td>
     <tr>
       <td></td>
       <td></td>
-      <td><a target="_blank" title="PHP 7.3"          href="https://github.com/devilbox/docker-php-fpm">7.3</a></td>
+      <td><a target="_blank" title="PHP 8.0" href="https://github.com/devilbox/docker-php-fpm">8.0</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL 13.0" href="https://github.com/docker-library/postgres">13.0</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 8.1" href="https://github.com/devilbox/docker-php-fpm">8.1</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PgSQL latest" href="https://github.com/docker-library/postgres">latest</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><a target="_blank" title="PHP 8.2" href="https://github.com/devilbox/docker-php-fpm">8.2</a><sup>[2]</sup></td>
       <td></td>
       <td></td>
       <td></td>
@@ -215,41 +263,80 @@ C:\devilbox> docker-compose up</pre></td>
 Furthermore PHP 5.2 does only work with Apache 2.4, Nginx stable and Nginx mainline. It does not work with Apache 2.2. Use at your own risk.</p>
 
 
-### Additional services
+## Additional services
 
 <p class="center">
   <strong>Documentation:</strong>
   <a href="https://devilbox.readthedocs.io/en/latest/custom-container/enable-all-container.html">Enable custom container</a>
 </p>
 
-<p class="center">Additionally to the default stack, there are a variety of other services that can be easily enabled and started.</p>
+<p>Additionally to the default stack, there are a variety of other services that can be easily enabled and started.</p>
 
 <table>
  <thead>
   <tr>
+   <th>Python (Flask)</th>
+   <th>Blackfire</th>
+   <th>ELK</th>
    <th>MailHog</th>
+   <th>Ngrok</th>
    <th>RabbitMQ</th>
+   <th>Solr</th>
+   <th>HAProxy</th>
+   <th>Varnish</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td>v1.0.0</td>
-   <td>3.6</td>
+   <td><a target="_blank" title="Python 2.7   " href="https://github.com/devilbox/docker-python-flask">2.7</a></td>
+   <td><a target="_blank" title="Blackfire 1.8" href="https://github.com/blackfireio/docker">1.8</a></td>
+   <td><a target="_blank" title="ELK stack" href="https://www.docker.elastic.co">5.x.y</a></td>
+   <td><a target="_blank" title="MailHog v1.0.0" href="https://github.com/mailhog/MailHog">v1.0.0</a></td>
+   <td><a target="_blank" title="Ngrok 2.x" href="https://github.com/devilbox/docker-ngrok">2.x</a></td>
+   <td><a target="_blank" title="RabbitMQ 3.6" href="https://github.com/rabbitmq/rabbitmq-server">3.6</a></td>
+   <td><a target="_blank" title="Solr 5" href="https://github.com/apache/lucene-solr">5</a></td>
+   <td><a target="_blank" title="HAProxy 1.x" href="https://github.com/devilbox/docker-haproxy">1.x</a></td>
+   <td><a target="_blank" title="Varnish 4" href="https://github.com/devilbox/docker-varnish">4</a></td>
   </tr>
   <tr>
-   <td>latest</td>
-   <td>3.7</td>
-  </tr>
-  <tr>
+   <td>...</td>
+   <td>...</td>
+   <td><a target="_blank" title="ELK stack" href="https://www.docker.elastic.co">6.x.y</a></td>
+   <td><a target="_blank" title="MailHog latest" href="https://github.com/mailhog/MailHog">latest</a></td>
    <td></td>
-   <td>latest</td>
+   <td><a target="_blank" title="RabbitMQ 3.7" href="https://github.com/rabbitmq/rabbitmq-server">3.7</a></td>
+   <td><a target="_blank" title="Solr 6" href="https://github.com/apache/lucene-solr">6</a></td>
+   <td></td>
+   <td><a target="_blank" title="Varnish 5" href="https://github.com/devilbox/docker-varnish">5</a></td>
+  </tr>
+  <tr>
+   <td><a target="_blank" title="Python 3.7   " href="https://github.com/devilbox/docker-python-flask">3.7</a></td>
+   <td><a target="_blank" title="Blackfire 1.18.0" href="https://github.com/blackfireio/docker">1.18.0</a></td>
+   <td><a target="_blank" title="ELK stack" href="https://www.docker.elastic.co">7.x.y</a></td>
+   <td></td>
+   <td></td>
+   <td><a target="_blank" title="RabbitMQ latest" href="https://github.com/rabbitmq/rabbitmq-server">latest</a></td>
+   <td><a target="_blank" title="Solr 7" href="https://github.com/apache/lucene-solr">7</a></td>
+   <td></td>
+   <td><a target="_blank" title="Varnish 6" href="https://github.com/devilbox/docker-varnish">6</a></td>
+  </tr>
+  <tr>
+   <td><a target="_blank" title="Python 3.8   " href="https://github.com/devilbox/docker-python-flask">3.8</a></td>
+   <td><a target="_blank" title="Blackfire latest" href="https://github.com/blackfireio/docker">latest</a></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td><a target="_blank" title="Solr latest" href="https://github.com/apache/lucene-solr">latest</a></td>
+   <td></td>
+   <td><a target="_blank" title="Varnish latest" href="https://github.com/devilbox/docker-varnish">latest</a></td>
   </tr>
  </tbody>
 </table>
 
 
 
-### Run only what you need
+## Run only what you need
 
 <p class="center">
   <strong>Documentation:</strong>
@@ -269,7 +356,7 @@ $ docker-compose up redis
 $ docker-compose stop mysql
 ```
 
-### Introduction Videos
+## Introduction Videos
 
 <p class="center">Head over to youtube for a quick introduction and see for yourself how easily new projects can be created.</p>
 
@@ -279,29 +366,1696 @@ $ docker-compose stop mysql
 </div>
 
 
-### PHP Modules
+## PHP Modules
+
 
 <div class="center">
   <p>The devilbox is a development stack, so it is made sure that a lot of PHP modules are available out of the box in order to work with many different frameworks. There will however be slight differences between the versions and especially with HHVM. To see the exact bundled modules for each version visit the corresponding docker repositories on Github:</p>
 
   <img class="battery" title="PHP" alt="PHP" src="/assets/img/logos/64x64/php.png" />
-
-  <p>
-  <strong><a title="PHP 5.2" href="https://github.com/devilbox/docker-php-fpm">PHP 5.2</a></strong> |
-  <strong><a title="PHP 5.3" href="https://github.com/devilbox/docker-php-fpm">PHP 5.3</a></strong> |
-  <strong><a title="PHP 5.4" href="https://github.com/devilbox/docker-php-fpm">PHP 5.4</a></strong> |
-  <strong><a title="PHP 5.5" href="https://github.com/devilbox/docker-php-fpm">PHP 5.5</a></strong> |
-  <strong><a title="PHP 5.6" href="https://github.com/devilbox/docker-php-fpm">PHP 5.6</a></strong> |
-  <strong><a title="PHP 7.0" href="https://github.com/devilbox/docker-php-fpm">PHP 7.0</a></strong> |
-  <strong><a title="PHP 7.1" href="https://github.com/devilbox/docker-php-fpm">PHP 7.1</a></strong> |
-  <strong><a title="PHP 7.2" href="https://github.com/devilbox/docker-php-fpm">PHP 7.2</a></strong> |
-  <strong><a title="PHP 7.3" href="https://github.com/devilbox/docker-php-fpm">PHP 7.3</a></strong>
-  </p>
-<p>amqp, apcu, bcmath, bz2, calendar, Core, ctype, curl, date, dba, dom, enchant, exif, fileinfo, filter, ftp, gd, gettext, gmp, hash, iconv, igbinary, imagick, imap, interbase, intl, json, ldap, libxml, mbstring, mcrypt, memcache, memcached, mongodb, msgpack, mysqli, mysqlnd, openssl, pcntl, pcre, PDO, pdo_dblib, PDO_Firebird, pdo_mysql, pdo_pgsql, pdo_sqlite, pgsql, phalcon, Phar, posix, pspell, readline, recode, redis, Reflection, session, shmop, SimpleXML, snmp, soap, sockets, sodium, SPL, sqlite3, standard, swoole, sysvmsg, sysvsem, sysvshm, tidy, tokenizer, uploadprogress, wddx, xdebug, xml, xmlreader, xmlrpc, xmlwriter, xsl, Zend OPcache, zip, zlib</p>
+</div>
+<blockquote>
+  <ul dir="auto">
+    <li>Core enabled (cannot be disabled): <strong><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></strong></li>
+    <li>Enabled (can be disabled): 🗸</li>
+    <li>Available, but disabled (can be enabled): <strong>d</strong></li>
+  </ul>
+</blockquote>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th>Modules</th>
+<th align="center"><sup>PHP 5.2</sup></th>
+<th align="center"><sup>PHP 5.3</sup></th>
+<th align="center"><sup>PHP 5.4</sup></th>
+<th align="center"><sup>PHP 5.5</sup></th>
+<th align="center"><sup>PHP 5.6</sup></th>
+<th align="center"><sup>PHP 7.0</sup></th>
+<th align="center"><sup>PHP 7.1</sup></th>
+<th align="center"><sup>PHP 7.2</sup></th>
+<th align="center"><sup>PHP 7.3</sup></th>
+<th align="center"><sup>PHP 7.4</sup></th>
+<th align="center"><sup>PHP 8.0</sup></th>
+<th align="center"><sup>PHP 8.1</sup></th>
+<th align="center"><sup>PHP 8.2</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><sup>amqp</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>apc</sup></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>apcu</sup></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>bcmath</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>blackfire</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>bz2</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>calendar</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>ctype</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>curl</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>date</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>dba</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>dom</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>enchant</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>ereg</sup></td>
+<td align="center"></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>exif</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>FFI</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>fileinfo</sup></td>
+<td align="center">🗸</td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>filter</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>ftp</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>gd</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>gettext</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>gmp</sup></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>hash</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>iconv</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>igbinary</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>imagick</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>imap</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>interbase</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>intl</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>ioncube</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>json</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>ldap</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>libxml</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>mbstring</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>mcrypt</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>memcache</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>memcached</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>mhash</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>mongo</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>mongodb</sup></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>msgpack</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>mysql</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>mysqli</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>mysqlnd</sup></td>
+<td align="center"></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>OAuth</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>oci8</sup></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td><sup>openssl</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>pcntl</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>pcre</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>PDO</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>pdo_dblib</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>PDO_Firebird</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>pdo_mysql</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>PDO_OCI</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td><sup>pdo_pgsql</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>pdo_sqlite</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>pdo_sqlsrv</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td><sup>pgsql</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>phalcon</sup></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>Phar</sup></td>
+<td align="center">🗸</td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>posix</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>pspell</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>psr</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td><sup>rdkafka</sup></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td><sup>readline</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>recode</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>redis</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>Reflection</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>session</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>shmop</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>SimpleXML</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>snmp</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>soap</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>sockets</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>sodium</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>solr</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>SPL</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>SQLite</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>sqlite3</sup></td>
+<td align="center"></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>sqlsrv</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td><sup>ssh2</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>standard</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>swoole</sup></td>
+<td align="center"></td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center">d</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>sysvmsg</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>sysvsem</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>sysvshm</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>tidy</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>tokenizer</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>uploadprogress</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>uuid</sup></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>vips</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>wddx</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>xdebug</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>xlswriter</sup></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>xml</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>xmlreader</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>xmlrpc</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td><sup>xmlwriter</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+<tr>
+<td><sup>xsl</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>yaml</sup></td>
+<td align="center"></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>Zend OPcache</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>zip</sup></td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+<td align="center">🗸</td>
+</tr>
+<tr>
+<td><sup>zlib</sup></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+<td align="center"><g-emoji class="g-emoji" alias="heavy_check_mark" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"><img class="emoji" alt="heavy_check_mark" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png"></g-emoji></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
-### Email catch-all
+## Email catch-all
 
 <div class="center">
   <img class="battery" title="Email catch-all" alt="Email catch-all" src="/assets/img/logos/64x64/email.png"/>
@@ -309,7 +2063,7 @@ $ docker-compose stop mysql
 </div>
 
 
-### Auto-DNS
+## Auto-DNS
 
 <div class="center">
   <img class="battery" title="Auto-DNS" alt="Auto-DNS" src="/assets/img/logos/64x64/dns.png" />
@@ -317,7 +2071,7 @@ $ docker-compose stop mysql
 </div>
 
 
-### Batteries included
+## Batteries included
 
 <div class="center">
   <strong>Documentation:</strong> <a href="https://devilbox.readthedocs.io/en/latest/readings/available-tools.html">Available Tools</a>
@@ -365,7 +2119,7 @@ $ docker-compose stop mysql
 
 
 
-### Supported Frameworks and CMS
+## Supported Frameworks and CMS
 
 <p class="center">There is nothing special about the devilbox, so any framework or CMS that will work with normal LAMP/MEAN stacks will work here as well. However in order to make double sure, a few popular applications have been explicitly tested.</p>
 
@@ -407,46 +2161,58 @@ $ docker-compose stop mysql
 > [Setup Zend](https://devilbox.readthedocs.io/en/latest/examples/setup-zend.html)
 
 
-### Community
+## Community
 
-<p class="center">Find documentation and help here.</p>
+<p class="center">The Devilbox has a lot of features reaching from a simple single-user development environment that
+works out of the box up to a shared development infrastructure for a corporate network.</p>
+<p class="center">In order to be aware about all that features, ensure to have skimmed over the
+<strong><a href="https://devilbox.readthedocs.io" rel="nofollow">documentation</a></strong>, so you know what can be done and how that might
+simplify your every-day life. If you ever run into any unforseen issues, feel free to join the
+<strong><a href="https://gitter.im/devilbox/Lobby" rel="nofollow">chat</a></strong> or visit the <strong><a href="https://devilbox.discourse.group" rel="nofollow">forums</a></strong> and get community support quickly.</p>
 
-<table width="100%" style="width:100%; display:table;">
+<table width="100%">
  <thead>
   <tr>
-   <th width="33%" style="width:33%;"><a href="https://devilbox.readthedocs.io" >Documentation</a></th>
-   <th width="33%" style="width:33%;"><a href="https://gitter.im/devilbox/Lobby" >Chat</a></th>
-   <th width="33%" style="width:33%;"><a href="https://devilbox.discourse.group/">Forum</a></th>
+   <th width="25%"><h3 dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://devilbox.readthedocs.io" rel="nofollow">Documentation</a></h3></th>
+   <th width="25%"><h3 dir="auto"><a id="user-content-chat" class="anchor" aria-hidden="true" href="#chat"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://gitter.im/devilbox/Lobby" rel="nofollow">Chat</a></h3></th>
+   <th width="25%"><h3 dir="auto"><a id="user-content-forum" class="anchor" aria-hidden="true" href="#forum"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://devilbox.discourse.group" rel="nofollow">Forum</a></h3></th>
+   <th width="25%"><h3 dir="auto"><a id="user-content-flames" class="anchor" aria-hidden="true" href="#flames"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/devilbox/flames">Flames</a></h3></th>
   </tr>
  </thead>
- <tbody style="vertical-align: middle; text-align: center;">
+ <tbody>
   <tr>
    <td>
-    <a href="https://devilbox.readthedocs.io">
-	 <img title="Documentation" name="Documentation" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/readthedocs.png" />
+    <a href="https://devilbox.readthedocs.io" rel="nofollow">
+     <img title="Documentation" name="user-content-documentation" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/readthedocs.png" style="max-width: 100%;">
     </a>
    </td>
    <td>
-    <a href="https://gitter.im/devilbox/Lobby">
-     <img title="Chat on Gitter" name="Chat on Gitter" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/gitter.png" />
+    <a href="https://gitter.im/devilbox/Lobby" rel="nofollow">
+     <img title="Chat on Gitter" name="user-content-chat on gitter" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/gitter.png" style="max-width: 100%;">
     </a>
    </td>
    <td>
-    <a href="https://devilbox.discourse.group/">
-     <img title="Forum" name="Forum" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/discourse.png" />
+    <a href="https://devilbox.discourse.group" rel="nofollow">
+     <img title="Devilbox Forums" name="user-content-forum" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/discourse.png" style="max-width: 100%;">
+    </a>
+   </td>
+   <td>
+    <a href="https://github.com/devilbox/flames">
+     <img title="Devilbox Flames" name="user-content-flames" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/flames2.png" style="max-width: 100%;">
     </a>
    </td>
   </tr>
   <tr>
-  <td><a href="https://devilbox.readthedocs.io">devilbox.readthedocs.io</a></td>
-  <td><a href="https://gitter.im/devilbox/Lobby">gitter.im/devilbox</a></td>
-  <td><a href="https://devilbox.discourse.group/">devilbox.discourse.group</a></td>
+  <td><a href="https://devilbox.readthedocs.io" rel="nofollow">devilbox.readthedocs.io</a></td>
+  <td><a href="https://gitter.im/devilbox/Lobby" rel="nofollow">gitter.im/devilbox</a></td>
+  <td><a href="https://devilbox.discourse.group" rel="nofollow">devilbox.discourse.group</a></td>
+  <td><a href="https://github.com/devilbox/flames">github.com/devilbox/flames</a></td>
   </tr>
  </tbody>
 </table>
 
 
-### Devilbox Intranet
+## Devilbox Intranet
 
 <p class="center">Once the devilbox is up and running, you can visit the bundled intranet on <a target="_blank" href="http://localhost">http://localhost</a>.<br/>The intranet is not just a simple dash, it provides many useful tools:</p>
 
@@ -458,12 +2224,12 @@ $ docker-compose stop mysql
 </div>
 
 
-### Security
+## Security
 
 <p class="center">Be aware that the docker service is running with root privileges on your system (like any other webserver for example). The devilbox is using a mix of official docker images and custom images. All integrated containers are available on <a href="https://github.com/cytopia/devilbox#run-time-matrix">Github</a> and can be reviewed at any time.</p>
 
 
-### Up-to-dateness
+## Up-to-dateness
 
 <p class="center">Docker containers are pushed to <a target="_blank" href="https://hub.docker.com/r/devilbox">Docker Hub</a> frequently.<br/>It should be enough for you to pull updated images on a regeular basis.</p>
 
@@ -474,37 +2240,52 @@ $ docker-compose pull
 <p class="center">However, if a new minor version (PHP for example) has just been released and you want to use it right away, you can simply *git clone* the docker repository and rebuild the container. Each container repository contains a shell script for easy building.</p>
 
 ```shell
-# Download PHP 7.1 repository
-$ git clone https://github.com/cytopia/docker-php-fpm-7.1
+# Download PHP 7.4 repository
+$ git clone https://github.com/cytopia/docker-php-fpm-7.4
 
 # Rebuild the container in order to get the latest minor/patch version
-$ cd docker-php-fpm-7.1
+$ cd docker-php-fpm-7.4
 $ ./build/docker-rebuild.sh
 ```
 
 
-### Integration Tests
+## Integration Tests
 
 <p class="center">In order to make sure everything always runs stable and as expected, the devilbox makes heavy use of integration tests. You can head over to <a target="_blank" href="https://travis-ci.org/cytopia/devilbox">Travis-CI</a> and have a look at stable and nightly builds.</p>
 
 
-### Contribute
+## Contributing
 
-<div class="center">
-  <p>Contributers are welcome in any way.</p>
-  
-  <p>First of all, if you like the project, please <a href="https://github.com/cytopia/devilbox">do star it</a>. Starring is an important measurement to see the number of active users and better allows me to organize my time and effort I can put into this project.</p>
-  
-  <p>You can also get actively involved. <a href="https://github.com/cytopia/devilbox">Do clone the project</a> and start improving whatever you think is useful. There is quite a lot todo and planned. If you like to contribute, view <a href="https://github.com/cytopia/devilbox/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> and <a href="https://github.com/cytopia/devilbox/issues/23">ROADMAP</a>.</p>
-  
-  <p>Major contributors will be credited within the intranet and on the github page.</p>
-</div>
+The Devilbox is still a young project with a long roadmap of features to come. Features are
+decided by you - **the community**, so any kind of contribution is welcome.
 
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/0)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/0)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/1)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/1)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/2)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/2)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/3)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/3)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/4)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/4)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/5)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/5)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/6)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/6)
+[![](https://sourcerer.io/fame/cytopia/cytopia/devilbox/images/7)](https://sourcerer.io/fame/cytopia/cytopia/devilbox/links/7)
 
-### License
+To increase visibility and bug-free operation:
 
-<div class="center">
-  <p>MIT License</p>
-  <p>Copyright (c) 2016-2018 cytopia</p>
-</div>
+* Star this project
+* Open up issues for bugs and feature requests
+* Clone this project and submit fixes or features
+* Visit the [Devilbox Community Forums](https://devilbox.discourse.group) for announcements and to help others
 
+Additionally you can [subscribe to Devilbox on CodeTriage](https://www.codetriage.com/cytopia/devilbox),
+read up on [CONTRIBUTING.md](CONTRIBUTING.md) and check the [ROADMAP](https://github.com/cytopia/devilbox/issues/23) about what is already planned for the near future.
+
+## Logos
+
+Logos and banners can be found at **[devilbox/artwork](https://github.com/devilbox/artwork)**. Feel free to use or modify them by the terms of their license.
+
+<img style="width:64px; height:64px;" width="64" height="64" src="https://github.com/devilbox/artwork/blob/master/submissions_logo/cytopia/01/png/logo_128_trans.png?raw=true" /> <img style="width:64px; height:64px;" width="64" height="64" src="https://github.com/devilbox/artwork/blob/master/submissions_logo/cytopia/02/png/logo_128_trans.png?raw=true" /> <img style="height:64px;" height="64" src="https://github.com/devilbox/artwork/blob/master/submissions_banner/cytopia/01/png/banner_128_trans.png?raw=true" />
+
+## License
+
+**[MIT License](LICENSE.md)**
+
+Copyright (c) 2016 **[cytopia](https://github.com/cytopia)**
