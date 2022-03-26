@@ -15,25 +15,29 @@
 	background-size: cover;
 	min-height: 100%;
 }
+p{
+	text-align: center;
+}
 h1, h2, h3 {
 	text-align: center;
 }
 h2, h3 {
 	margin-top:30px;
 }
-
-
 table {
     margin: auto;
-    width: 50%;
+    width:100%;
     padding: 10px;
 }
-
 .center {
 	text-align: center;
 }
 img {
 	max-width:100%;
+}
+img.emoji {
+	padding: 0px;
+    margin: 0px 0 0px 0;
 }
 img.battery {
 	/*border: 1px solid black;*/
@@ -41,7 +45,6 @@ img.battery {
 	width: 64px;
 	height: 64px;
 }
-
 /* remove gh pages link */
 footer.inner p {
 	display: none;
@@ -49,7 +52,6 @@ footer.inner p {
 footer.inner p.copyright {
 	display: block;
 }
-
 .table-scroll {
 	position: relative;
 	overflow: scroll;
